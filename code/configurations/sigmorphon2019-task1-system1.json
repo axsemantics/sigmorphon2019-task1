@@ -1,0 +1,43 @@
+{
+  "dataset_reader": {
+    "type": "sigmorph_seq2seq_datasetreader"
+  },
+  "train_data_path": "",
+  "validation_data_path": "",
+  "model": {
+    "type": "ax_seq2seq",
+    "max_decoding_steps": 90,
+    "use_bleu": false,
+    "beam_size": 10,
+    "attention": {
+      "type": "dot_product"
+    },
+    "source_embedder": {
+      "tokens": {
+        "type": "embedding",
+        "embedding_dim": 200
+      }},
+      "encoder": {
+        "type": "lstm",
+        "input_size": 200,
+        "hidden_size": 400,
+        "bidirectional": true,
+        "num_layers": 2,
+        "dropout": 0.4
+      }
+    },
+    "iterator": {
+      "type": "bucket",
+      "batch_size": 32,
+      "sorting_keys": [["source_tokens", "num_tokens"]]
+    },
+    "trainer": {
+      "cuda_device": 0,
+      "num_epochs": 100,
+      "optimizer": {
+        "type": "adam"
+      },
+      "num_serialized_models_to_keep": 2,
+      "patience": 30
+    }
+}
