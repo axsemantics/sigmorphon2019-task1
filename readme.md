@@ -15,11 +15,11 @@ git clone https://github.com/sigmorphon/2019 conll2019
 
 ### folder structure in code
 
+| path           | description                              |
 |----------------|------------------------------------------|
 | library        | python code that extends allennlp        |
 | configurations | experiments based on this configurations |
 | sigmorphon     | sigmorphon specific files and scripts    |
-|----------------|------------------------------------------|
 
 
 ### run code
