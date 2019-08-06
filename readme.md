@@ -1,5 +1,7 @@
 ## Code of "AX Semantics' Submission to the SIGMORPHON 2019 Shared Task"
 
+Paper: https://www.aclweb.org/anthology/papers/W/W19/W19-4201/
+
 ### Introduction
 
 We use AllenNLP - https://github.com/allenai/allennlp
